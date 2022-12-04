@@ -1,35 +1,61 @@
-// TODO: Include packages needed for this application
+// COMPLETED: Include packages needed for this application
 const inquirer = require("inquirer")
 const fs = require("fs")
-const generateMarkdown = require("./utils/generateMarkdown")
+const generateMarkdown = require("./utils/generateMarkdown");
+const { default: Choices } = require("inquirer/lib/objects/choices");
 
-// TODO: Create an array of questions for user input
+// COMPLETED: Create an array of questions for user input
 const questions = [{
     type: "input",
-    message: "Enter your name",
-    name: "name"
+    message: "What is your GitHub username?",
+    name: "username",
 },{
     type: "input",
-    message: "Enter your age",
-    name: "age"
+    message: "What is your email address?",
+    name: "email",
+},{
+    type: "input",
+    message: "What is your project's name?",
+    name: "projectName",
+}, {
+    type: "input",
+    message: "Please write a short description of your project",
+    name: "description",
 },{
     type: "list",
-    message: "Choose your favorite food",
-    name: "food",
-    choices: ["pizza", "ice cream", "cheesy bread"] 
-}];
+    message: "What kind of license should your project have?",
+    name: "license",
+    choices: ["Apache License 2.0", "GNU GPLv3", "ISC License", "MIT", "Mozilla Public License 2.0",]
+},{
+    type: "input",
+    message: "What command should be run to install dependencies?",
+    name: "installCommand",
+},{
+    type: "input",
+    message: "What command should be run to run tests?",
+    name: "testCommand",
+},{
+    type: "input",
+    message: "What does the user need to know about using the repo?",
+    name: "usingRepo"
+},{
+    type: "input",
+    message: "What does the user need to know about contributing to the repo??",
+    name: "contributeRepo",
+}
+];
 
-// TODO: Create a function to write README file
+// COMPLETED: Create a function to write README file
 function writeToFile(fileName, data) {
     console.log(data);
     fs.writeFile("./dist/README.md", generateMarkdown(data),err => console.log(err))
 }
 
-// TODO: Create a function to initialize app
+// COMPLETED: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(answers => {
         console.log(answers);
- writeToFile("Dylan.md", answers)
+ writeToFile("README.md", answers)
     })
 }
 
