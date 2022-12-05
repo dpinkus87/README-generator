@@ -25,7 +25,7 @@ const questions = [{
     type: "list",
     message: "What kind of license should your project have?",
     name: "license",
-    choices: ["Apache License 2.0", "GNU GPLv3", "ISC License", "MIT", "Mozilla Public License 2.0",]
+    choices: ["Apache License 2.0", "GNU GPLv3", "ISC License", "MIT", "Mozilla Public License 2.0", "No license"]
 },{
     type: "input",
     message: "What command should be run to install dependencies?",
@@ -62,3 +62,5 @@ function init() {
 
 // Function call to initialize app
 init();
+
+

@@ -1,41 +1,58 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
+// TODO: 
+function renderLicenseBadge(selectedLicense) {
+  if(selectedLicense === 'MIT') {
+    return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+    } else if (selectedLicense === 'Apache License 2.0') {
+    return `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`;
+    } else if (selectedLicense === 'GNU GPLv3') { 
+    return `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
+    } else if (selectedLicense === 'ISC License') {
+    return `![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)`;
+    } else if (selectedLicense === 'Mozilla Public License 2.0') {
+    return `![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`
+      } else {
+        return ""
+      }
+          }
 
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {
-
+  if(license !== 'No license') {
+    return '- [license](#license)'
+  } else  return''
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+
 function renderLicenseSection(license) {
-
+  if(license !== 'No license') {
+    return `## License`
+  } else {
+    return ''
+  }
 }
+
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `
+          function generateMarkdown(data) {
+            console.log(data);
+            return `
 # ${data.projectName}
 
 ## Description
 
 ${data.description}
 
-## License badge
+${renderLicenseBadge(data.license)}
 
 ## Table of Contents 
 
-- [License](#license)
-- [Installation](#Installation)
-- [License](#license)
-- [Usage](#Usage)
+${renderLicenseLink(data.license)}
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [How to contribute](#how to contribute)
+- [Tests](#tests)
 
-## License 
-${data.license}
+${renderLicenseSection(data.license)}
 
 ## Installation
 
@@ -43,20 +60,16 @@ ${data.installCommand}
 
 ## Usage
 
-${data.usage}
+${data.usingRepo}
 
 Provide instructions and examples for use. Include screenshots as needed.
 
 ## Credits
 
 This project was developed by ${data.username} for challenge #9. 
+
 ---
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
 ## How to Contribute
 
@@ -67,6 +80,8 @@ If you would like to contribute, you can include submit your request directly to
 To test the application, simply enter the command ${data.testCommand} in the terminal.
 
 `;
-}
+ }
 
 module.exports = generateMarkdown;
+
+

@@ -1,63 +1,45 @@
 
-
-
-
-
-  # The BEST
+# the BEST readme generator
 
 ## Description
 
-Basic stuff
+Create a program to generate a readme file for GitHub
 
-## License badge
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Table of Contents 
 
-- [License](#license)
+- [license](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [How to contribute](#how to contribute)
+- [Tests](#tests)
+
+## License
 
 ## Installation
 
-npm
-
+npm i
 
 ## Usage
 
-undefined
-
-
+Nothing
 
 Provide instructions and examples for use. Include screenshots as needed.
 
-
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
-
+This project was developed by dpinkus87 for challenge #9. 
 
 ---
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
 
 ## How to Contribute
 
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+If you would like to contribute, you can include submit your request directly to the created. Please contact dpinkus87 via email here: dylanpinkus@gmail.com.
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+To test the application, simply enter the command npm t in the terminal.
 
